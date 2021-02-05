@@ -1,7 +1,6 @@
-<h3>Enter your Tendies</h3>
+<h3>Enter your GME Winnings</h3>
 <input type="text" (keyup)="onChangeEvent($event)">
-<button disabled={{!moneyValid}}>Submit</button>
+<br>
+<button (click)="verify()">Verify</button>
 <br><br>
-<input type="text" ng-model="test">
-<button (click)="verify(test)">Verify</button>
-{{simpleCheck}}
+{{resultMessage}}

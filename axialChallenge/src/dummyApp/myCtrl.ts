@@ -1,19 +1,20 @@
 app.controller("myCtrl", function($scope) {
-  const regex = /^(\.?)(\d+)([m,M,b,B,k]?)$/;
+  const regex = /^(\d*)(\.?)(\d*)([m,M,b,B,k]?)$/;
   const commaRegex = /\B(?=(\d{3})+(?!\d))/g;
-  $scope.entry = ""
+  $scope.entry = "";
   $scope.verify = () => {
     const entry = $scope.entry;
     let result = entry.match(regex);
     if (!result) { 
       $scope.resultMessage = "You gotta talk the talk";
     } else {
-      let answer = parseInt(result[2]);
-      if (result[1]) {
-        const power = result[2].length;
-        answer = answer/(Math.pow(10, power));
+      let answer = parseInt(result[1]);
+      if (result[2]) {
+        const power = result[3].length;
+        let decimal = parseInt(result[3]);
+        answer = answer + (decimal/(Math.pow(10, power)));
       }
-      switch (result[3]) {
+      switch (result[4]) {
         case "b":
         case "B":
           answer = answer * 1000000000;
