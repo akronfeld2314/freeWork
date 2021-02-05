@@ -21,7 +21,7 @@ export class MoneyInputComponent {
     if (!tempParts) { 
       this.resultMessage = "You gotta talk the talk";
     } else {
-      let answer = parseInt(tempParts[1]);
+      let answer = (tempParts[1] ? parseInt(tempParts[1]) : 0);
       if (tempParts[2]) {
         const power = tempParts[3].length;
         let decimal = parseInt(tempParts[3]);
