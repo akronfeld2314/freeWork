@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+      {{ firstName + " " + lastName }}
+      ENTER YOUR GME WINNINGS:
+      <br>
+      <input ng-model="entry" placeholder="enter your gains">
+      <br>
+      <button ng-click="verify()">Verify</button>
+      <br>
+      {{resultMessage}}
+    </div>
+
+    <script src="myApp.ts"></script>
+    <script src="myCtrl.ts"></script>
+
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<h3>Enter your Tendies</h3>
+<input type="text" (keyup)="onChangeEvent($event)">
+<button disabled={{!moneyValid}}>Submit</button>
+<br><br>
+<input type="text" ng-model="test">
+<button (click)="verify(test)">Verify</button>
+{{simpleCheck}}
