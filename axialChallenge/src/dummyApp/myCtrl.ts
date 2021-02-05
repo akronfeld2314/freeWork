@@ -8,7 +8,7 @@ app.controller("myCtrl", function($scope) {
     if (!result) { 
       $scope.resultMessage = "You gotta talk the talk";
     } else {
-      let answer = (tempParts[1] ? parseInt(tempParts[1]) : 0);
+      let answer = (result[1] ? parseInt(result[1]) : 0);
       if (result[2]) {
         const power = result[3].length;
         let decimal = parseInt(result[3]);
